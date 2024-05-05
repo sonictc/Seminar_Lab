@@ -1,0 +1,397 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: DigitalAlarm1
+  Id: g=b61ed7ee135d98564c0baf427cc224e8
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=0a11e8ee76f71c00fba4936c8a4f4133
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=5b6f3275db600c2a06048d169dbdf6eb
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: LastEvent
+    Id: g=2dd5fdf0656e623c8f0ad2b4659799b0
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Name: OffNormalAlarmTypeHandler1
+    Id: g=c09e818392416861fe5f53596fc84ca8
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=e9c18827c0bbca988858b7e9a7e27c77
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType/DiscreteAlarmType/OffNormalAlarmType"
+    - Name: MethodsToCall
+      Id: g=db99f347712e6f14cd44aa2c6f0c735b
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Id: g=810aad4139170a509fca06f6e8758d35
+        Type: BaseObjectType
+        Children:
+        - Name: ns=2;ObjectPointer
+          Id: g=cd4a432c8a0c173c0064bd3a8aff6c74
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=4a2487a8b39b543d71c9282ec99682d5
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=a4cbc028e374321e6038b9b64162f598
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../NetLogic/LineNotifyLogic@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=ae0a89cd2db8f8660b5cd473667d0278
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=2;Method
+          Id: g=207c8481156683bfe67f3547f504cfa0
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "SendLineNotify"
+        - Name: InputArguments
+          Id: g=1ffac15c90d501ac54dc653a0308708f
+          Type: BaseObjectType
+          Children:
+          - Name: alarmActive
+            Id: g=263b5823c92c4a9c797cfce142e52435
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=13a51e0e5e49ed2388f73760cfedccc3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Active"
+          - Name: allowSendingAlertMsg
+            Id: g=cf7ad442968067c5f103fae2179d2fe4
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: alertMessage
+            Id: g=a90ade685e61f5b7589ce5d6689d0d88
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Test Line Notify"
+          - Name: allowSendingClearMsg
+            Id: g=b40cffd853ad377208833c6a1935927d
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: clearMessage
+            Id: g=67a553a795e2e079f726763f40d9c152
+            Type: BaseDataVariableType
+            DataType: String
+            Value: ""
+          - Name: useAlertSticker
+            Id: g=93a694b1eba764af748573d1d1af419d
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: alertStickerPackageId
+            Id: g=852562f469a4a0c3b23f203b2195fb6f
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: alertStickerId
+            Id: g=d8cc7b51117f7f75db0dc6ea45243c80
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: useClearSticker
+            Id: g=c35947e9d037f9248e6d05f12bfa26a9
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: clearStickerPackageId
+            Id: g=0a864534584054150ca71e1dfc743a8e
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: clearStickerId
+            Id: g=1ad110b62e0b35478447604bf7ea4bdd
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+    - Name: EventArguments
+      Id: g=36c94ed22a643996866f23a9ca78cd0e
+      Type: OffNormalAlarmType
+      Children:
+      - Name: NormalState
+        Id: g=54a5dedca575452981f644f447c78b80
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: EnabledState
+        Id: g=a36dd5202896c3a24db61b14169e5509
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Id: g=8c5d9867a2b9bd3cec875a74fb017104
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+        - Name: ActiveState
+          Id: g=adfb177210dc7095d579d61e1eb8d4c3
+          Type: TwoStateVariableType
+          DataType: LocalizedText
+          ReferenceType: HasTrueSubState
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Children:
+          - Name: Id
+            Id: g=ac996d6cb27ed5b537a1b5748fd226e1
+            Type: PropertyType
+            DataType: Boolean
+            Value: false
+      - Name: ActiveState
+        Id: g=b990d4a3deb16cfc82ce3b0bef8f7074
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Id: g=a4eae7d1d381ec496767c503a3b8b2de
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+      - Name: InputNode
+        Id: g=ac62f8b978a32166ece76253486b236b
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SuppressedOrShelved
+        Id: g=a6e41fe88ebcbb650ccc9d7aca25dadc
+        Type: PropertyType
+        DataType: Boolean
+        Value: false
+      - Name: AckedState
+        Id: g=1b2bb741df71f456b8d8cb27f107d139
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Id: g=8b376ad77b86f482a6c4624f230bc612
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+      - Class: Reference
+        Target: ns=0;i=9111
+        Direction: Forward
+      - Name: ConditionClassId
+        Id: g=531ca0cadfff8a333282170aec9976c7
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: ConditionClassName
+        Id: g=a8552e2407c6d62a9feea4a1994352f7
+        Type: PropertyType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: ConditionName
+        Id: g=61e1844f4092c2ce5254cea28c6a8707
+        Type: PropertyType
+        DataType: String
+        Value: ""
+      - Name: BranchId
+        Id: g=f84f017cc48ce8b9d75b41d72041ef3d
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: Retain
+        Id: g=fb5a87fd1a58fe29d52bc0b05c0c0a72
+        Type: PropertyType
+        DataType: Boolean
+        Value: false
+      - Name: Quality
+        Id: g=831ff30baf16d55c967e440bd5a978bf
+        Type: ConditionVariableType
+        DataType: StatusCode
+        Value: 0
+        Children:
+        - Name: SourceTimestamp
+          Id: g=e37f6c5f7320f7323bf25ee5e6458b06
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastSeverity
+        Id: g=6c4e021528f8f41d5b20f347e06fa8d5
+        Type: ConditionVariableType
+        DataType: UInt16
+        Value: 0
+        Children:
+        - Name: SourceTimestamp
+          Id: g=9bc206f75f211af5852f37240eb19105
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: Comment
+        Id: g=ce0d7cc4dd80256beb933998d93324a5
+        Type: ConditionVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: SourceTimestamp
+          Id: g=e72ee65b3263e517e401852c8b7c8828
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: ClientUserId
+        Id: g=c5a70bb78a033a15a2558fec0bcd67c7
+        Type: PropertyType
+        DataType: String
+        Value: ""
+      - Class: Reference
+        Target: ns=0;i=9028
+        Direction: Forward
+      - Class: Reference
+        Target: ns=0;i=9027
+        Direction: Forward
+      - Class: Reference
+        Target: ns=0;i=9029
+        Direction: Forward
+      - Name: EventId
+        Id: g=26428e33cec3ed7215a148d573358733
+        Type: PropertyType
+        DataType: ByteString
+        Value: ""
+      - Name: EventType
+        Id: g=63b5c9a852ba274fad75b8f89dd1ce6b
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SourceNode
+        Id: g=062e87f46fc567446162946186eaa38b
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SourceName
+        Id: g=ad325b5ec2329d1fb9c4754904fd5f01
+        Type: PropertyType
+        DataType: String
+        Value: ""
+      - Name: Time
+        Id: g=69f1073eea7cf2522a09730b18690431
+        Type: PropertyType
+        DataType: UtcTime
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: ReceiveTime
+        Id: g=e6d20f32725b132e62adcecff5ca5d24
+        Type: PropertyType
+        DataType: UtcTime
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: Message
+        Id: g=7c905f7f8164a7280a61df31e23c3c3e
+        Type: PropertyType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Severity
+        Id: g=05639b85aa55df9635a4fc4a8bf30f64
+        Type: PropertyType
+        DataType: UInt16
+        Value: 0
+  - Name: Active
+    Id: g=f0234a59c6c39961ec0aa94d16bc4726
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+    Value: false
+- File: AlarmsWithEmailNotification1/AlarmsWithEmailNotification1.yaml
+- Name: DigitalAlarmWithEmailNotification1
+  Id: g=75b6ace0dd9734c7f76caedec3e94f4c
+  Type: DigitalAlarmWithEmailNotification
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=69841c519656eaf07c236711dbd991dc
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=0ea70cc5916059c0997c4d4d6e199518
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: LastEvent
+    Id: g=66925b11f92f0698dc195c4b806d8f53
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: DigitalAlarmWithEmailNotificationLogic
+    Id: g=f37e9abb80e03cffb5b3a5f5f80b1270
+    Type: NetLogic
+  - Name: EmailUser
+    Id: g=9c16ac3ea4413a9f0aa19916276c61b7
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Seminar_Lab/Security/Users/User1"
+    Children:
+    - Name: Kind
+      Id: g=143a695966393d600d21502a4c791288
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: EmailSender
+    Id: g=b9d0dc5ef21eaa0e360e83e4e81f2d14
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Seminar_Lab/NetLogic/EmailSenderLogic"
+    Children:
+    - Name: Kind
+      Id: g=8cfd8d4c7eb161869c18bc84f742ecea
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+  - Name: AutoAcknowledge
+    Id: g=5cdcf88781f5f9651793c8c172f0f3e4
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=a1e7200d7a3f30aba98716d4988afd01
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Id: g=edf2c5b62193df10f14fe098a89930c1
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Hello gmail"}

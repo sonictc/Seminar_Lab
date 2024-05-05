@@ -1,0 +1,24 @@
+Name: Translations
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [9,3],
+    "Body": [
+     "","en-US","th-TH",
+     "Email Sender Lab","Email Sender Lab","ทดลองส่งเมลล์",
+     "Lab1 : MQTT","Lab1 : MQTT","แล็บ1",
+     "Lab2 : Line Notification","Lab2 : Line Notification","แล็บ2",
+     "Lab3 : Email Sender","Lab3 : Email Sender","แล็บ3",
+     "Lab4 : OPC UA","Lab4 : OPC UA","แล็บ4",
+     "Line Notification Lab","Line Notification Lab","ไลน์โนติ",
+     "MQTT Broker Status : {0}","MQTT Broker Status : {0}","สถานะเอ็มคิวทีทีโบรกเกอร์ : {0}",
+     "MQTT Lab","MQTT Lab","เอ็มคิวทีทีแล็บ"
+    ]
+   }
