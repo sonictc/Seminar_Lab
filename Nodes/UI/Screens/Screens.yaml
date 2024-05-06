@@ -103,17 +103,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Int32
         Value: 0
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable1"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -127,18 +116,7 @@ Children:
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
-        Value: "0"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable1@BrowseName"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
+        Value: "Variable1"
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -175,17 +153,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Int32
         Value: 0
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable2"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -199,18 +166,7 @@ Children:
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
-        Value: "0"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable2@BrowseName"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
+        Value: "Variable2"
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -247,17 +203,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Int32
         Value: 0
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable3"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -271,18 +216,7 @@ Children:
       - Name: Label
         Type: BaseDataVariableType
         DataType: String
-        Value: ""
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Model/Variable3@BrowseName"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
+        Value: "Variable3"
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -533,17 +467,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: false
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Alarms/DigitalAlarm1/InputValue"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -573,7 +496,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     ModellingRule: Optional
-    Value: "#3a3a3a"
+    Value: "#3b3b3b"
   - Name: VerticalLayout1
     Type: ColumnLayout
     Children:
@@ -647,17 +570,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: false
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/Seminar_Lab/Alarms/DigitalAlarmWithEmailNotification1/InputValue"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -678,3 +590,8 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 86.0
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: -1.0

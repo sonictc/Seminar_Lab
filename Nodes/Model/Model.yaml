@@ -1,36 +1,19 @@
 Name: Model
-Id: g=db7d09e017b03696885d186139720881
 Type: ModelCategoryFolder
 Children:
 - Name: Variable1
-  Id: g=7eee77a30edf6935eb1713607f36e0ed
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
 - Name: Variable2
-  Id: g=63f798f6fe6804ec15f367063b01c87e
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
 - Name: Variable3
-  Id: g=3ed592ab04af8bf3b634a010400af0da
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
 - Name: MQTT_Status
-  Id: g=ae61f5494d5149ffb9bdefab97c4bf39
   Type: BaseDataVariableType
   DataType: Boolean
   Value: false
-  Children:
-  - Name: DynamicLink
-    Id: g=651c47392be72b96489bce13442b7023
-    Type: DynamicLink
-    DataType: NodePath
-    Value: "../../NetLogic/MQTTLogic/MqttClient/Connected"
-    Children:
-    - Name: Mode
-      Id: g=a176424801f9ff4d67476a1fb8270f7e
-      Type: BaseVariableType
-      DataType: DynamicLinkMode
-      Value: 2
