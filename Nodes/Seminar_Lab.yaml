@@ -57,6 +57,7 @@ Children:
 - File: Loggers/Loggers.yaml
 - File: DataStores/DataStores.yaml
 - File: Reports/Reports.yaml
+- File: OPCUA/OPCUA.yaml
 - File: CommDrivers/CommDrivers.yaml
 - File: NetLogic/NetLogic.yaml
 - File: Security/Security.yaml

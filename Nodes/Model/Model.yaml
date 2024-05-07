@@ -13,7 +13,4 @@ Children:
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
-- Name: MQTT_Status
-  Type: BaseDataVariableType
-  DataType: Boolean
-  Value: false
+- File: AlarmTag/AlarmTag.yaml

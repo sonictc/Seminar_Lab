@@ -1,7 +1,7 @@
 Name: Translations
 Type: TranslationsCategoryFolder
 Children:
-- Name: LocalizationDictionary1
+- Name: LocalizationDictionary
   Type: LocalizationDictionary
   DataType: String
   ValueRank: OneOrMoreDimensions
@@ -9,16 +9,22 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [9,3],
+    "Dimensions": [15,3],
     "Body": [
      "","en-US","th-TH",
-     "Email Sender Lab","Email Sender Lab","ทดลองส่งเมลล์",
-     "Lab1 : MQTT","Lab1 : MQTT","แล็บ1",
-     "Lab2 : Line Notification","Lab2 : Line Notification","แล็บ2",
-     "Lab3 : Email Sender","Lab3 : Email Sender","แล็บ3",
-     "Lab4 : OPC UA","Lab4 : OPC UA","แล็บ4",
-     "Line Notification Lab","Line Notification Lab","ไลน์โนติ",
-     "MQTT Broker Status : {0}","MQTT Broker Status : {0}","สถานะเอ็มคิวทีทีโบรกเกอร์ : {0}",
-     "MQTT Lab","MQTT Lab","เอ็มคิวทีทีแล็บ"
+     "MQTT","MQTT","MQTT",
+     "LINE","LINE","ไลน์",
+     "OPC UA","OPC UA","OPC UA",
+     "Line Notification Lab","Line Notification Lab","การทดสอบ แจ้งเตือนผ่านไลน์",
+     "MQTT Lab","MQTT Lab","การทดสอบ ส่งข้อมูลผ่าน MQTT",
+     "OPC UA Lab","OPC UA Lab","การทดสอบ ส่งข้อมูลด้วย OPC UA",
+     "Language :","Language :","ภาษา :",
+     "Get Token","Get Token","ขอรหัส Token",
+     "FTOptix Hands-On Lab","FTOptix Hands-On Lab","FTOptix Hands-On Lab",
+     "Free to Test Broker","Free to Test Broker","Broker ฟรีสำหรับเทส",
+     "Build your broker","Build your broker","สร้าง Broker",
+     "Theme :","Theme :","ธีม :",
+     "View Sticker","View Sticker","ดูรหัสสติกเกอร์",
+     "What is MQTT?","What is MQTT?","MQTT คือ?"
     ]
    }

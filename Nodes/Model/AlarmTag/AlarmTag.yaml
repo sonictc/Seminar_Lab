@@ -1,0 +1,15 @@
+Name: AlarmTag
+Type: FolderType
+Children:
+- Name: Alarm1
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- Name: Alarm2
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- Name: Alarm3
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false

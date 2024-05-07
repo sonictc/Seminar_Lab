@@ -3,11 +3,4 @@ Id: g=8cdfe95c558e909385d4fe7ddc9a2655
 Type: UsersCategoryFolder
 Children:
 - Name: User1
-  Id: g=ee97eb7ebcdfd8a35ed53a6b362b9594
   Type: UserType
-  Children:
-  - Name: Email
-    Id: g=9f402e7f4cfe6bc0324c8c276979c426
-    Type: BaseDataVariableType
-    DataType: String
-    Value: ""

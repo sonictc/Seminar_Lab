@@ -10,7 +10,7 @@ Children:
     - Name: Node1
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Seminar_Lab/Security"
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
@@ -39,7 +39,7 @@ Children:
     - Name: Node1
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Seminar_Lab/Alarms"
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Type: PropertyType
