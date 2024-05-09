@@ -15,55 +15,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 50.0
-  - Name: Label1
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"NamespaceIndex":7,"TextId":"FTOptix Hands-On Lab"}
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 2
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 14.0
-    - Name: FontSize
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 24.0
-    - Name: FontItalic
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-      Value: true
-    - Name: FontWeight
-      Type: BaseDataVariableType
-      DataType: FontWeightEnum
-      ModellingRule: Optional
-      Value: 950
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "HeaderLabel"
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -4.0
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
+    Value: 70.0
   - Name: SettingButton
     Type: Panel
     Children:
@@ -189,6 +141,86 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 5.0
+  - Name: AdvancedSVGImage1
+    Type: AdvancedSVGImage
+    Children:
+    - Name: SVGElementProperties
+      Type: BaseObjectType
+      Children:
+      - Name: AdvancedSVGImageProperty1
+        Type: AdvancedSVGImageElementProperty
+        Children:
+        - Name: ID
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+        - Name: Property
+          Type: BaseDataVariableType
+          DataType: AdvancedSVGImagePropertyClass
+          Value: 0
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#000000"
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: ""
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Value: false
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}==\"FriendlyLight\""
+            - Name: ns=2;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet@BrowseName"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=7;%PROJECTDIR%/Image/svg/logo_FTOptix_blue.svg"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "ns=7;%PROJECTDIR%/Image/svg/logo_FTOptix_white.svg"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
 - Name: Footer
   Id: g=821b4992d11f3691b62a33534302b00e
   Supertype: Screen
@@ -239,7 +271,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 210.0
+        Value: 160.0
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
@@ -330,6 +362,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
     - Name: MQTTBtn
       Type: Button
       Children:
@@ -648,7 +685,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 10.0
+          Value: 45.0
       - Name: Button1
         Type: Button
         Children:
@@ -656,7 +693,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"EXIT"}
+          Value: {"NamespaceIndex":7,"TextId":"EXIT"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -666,12 +703,12 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 11.0
+          Value: 5.0
         - Name: TopMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 25.0
+          Value: 15.0
         - Name: Width
           Type: BaseVariableType
           DataType: Size
@@ -763,6 +800,91 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "Transparent"
+      - Name: StripedRightArrow1
+        Type: ScaleLayout
+        WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+        Children:
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#d1d3d4"
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet/TextColor"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 17.0
+        - Name: shape
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/res/StripedRightArrow_shape.svg"
+          - Name: DynamicColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#d1d3d4"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../FillColor"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 18.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 17.38800048828125
+        - Name: OriginalWidth
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+        - Name: OriginalHeight
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 17.38800048828125
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 462.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 26.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: RightMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 63.0
   - Name: VerticalAlignment
     Type: BaseVariableType
     DataType: VerticalAlignment
@@ -773,6 +895,196 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 70.0
+  - Name: HighlightBar
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 160.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: BorderThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      Value: 0.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#65b2ef"
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#65b2ef"
+    - Name: NumberAnimation1
+      Type: NumberAnimation
+      Children:
+      - Name: To
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 0.0
+      - Name: Target
+        Type: NodePointer
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/VariableTypes/BaseVariableType"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../LeftMargin@NodeId"
+      - Name: Running
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==0"
+          - Name: ns=2;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../CurrentPage"
+      - Name: Duration
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 200
+    - Name: NumberAnimation2
+      Type: NumberAnimation
+      Children:
+      - Name: To
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 160.0
+      - Name: Target
+        Type: NodePointer
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/VariableTypes/BaseVariableType"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../LeftMargin@NodeId"
+      - Name: Running
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==1"
+          - Name: ns=2;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../CurrentPage"
+      - Name: Duration
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 200
+    - Name: NumberAnimation3
+      Type: NumberAnimation
+      Children:
+      - Name: To
+        Type: BaseDataVariableType
+        DataType: Float
+        Value: 320.0
+      - Name: Target
+        Type: NodePointer
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/VariableTypes/BaseVariableType"
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../LeftMargin@NodeId"
+      - Name: Running
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==2"
+          - Name: ns=2;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../CurrentPage"
+      - Name: Duration
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 200
+    - Name: CornerRadius
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1.0
+  - Name: CurrentPage
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
 - Name: Screen1_OPCUA
   Id: g=de88f6b860c331de6d6a7d1bbe7dc09f
   Supertype: Screen
@@ -829,11 +1141,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 48.0
-      - Name: FontWeight
-        Type: BaseDataVariableType
-        DataType: FontWeightEnum
-        ModellingRule: Optional
-        Value: 700
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -849,6 +1156,11 @@ Children:
         DataType: String
         ModellingRule: Optional
         Value: "Default"
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        ModellingRule: Optional
+        Value: 500
     - Name: LinearGauge1
       Type: LinearGauge
       Children:
@@ -1025,7 +1337,7 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         ModellingRule: Optional
-        Value: 700
+        Value: 500
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -1397,7 +1709,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 130.0
+      Value: 181.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -1407,64 +1719,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
+      Value: -21.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 30.0
-    - Name: Direction
-      Type: BaseDataVariableType
-      DataType: OrientationEnum
-      ModellingRule: Optional
-      Value: 0
-    - Name: AnimationType
-      Type: BaseDataVariableType
-      DataType: DropDownButtonAnimationTypeEnum
-      ModellingRule: Optional
-      Value: 1
-    - Name: Style
-      Type: BaseDataVariableType
-      DataType: String
-      ModellingRule: Optional
-      Value: "Accent"
-  - Name: EclipseBtn
-    Type: DropDownButton
-    Children:
-    - Name: Panel
-      Type: NodePointer
-      DataType: NodeId
-      Value: "/Objects/Seminar_Lab/UI/Template/BuildMQTTBroker"
-      Children:
-      - Name: Kind
-        Type: PropertyType
-        DataType: NodeId
-        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"NamespaceIndex":7,"TextId":"Build your broker"}
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 130.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 80.0
     - Name: Direction
       Type: BaseDataVariableType
       DataType: OrientationEnum
@@ -1501,7 +1761,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 130.0
+      Value: 210.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -1511,12 +1771,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
+      Value: -21.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 130.0
+      Value: 80.0
     - Name: Direction
       Type: BaseDataVariableType
       DataType: OrientationEnum
@@ -1592,7 +1852,7 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         ModellingRule: Optional
-        Value: 700
+        Value: 500
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -1651,7 +1911,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
+      Value: 166.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -1681,7 +1941,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 71.0
+      Value: 80.0
     - Name: RightMargin
       Type: BaseVariableType
       DataType: Size
@@ -1692,6 +1952,11 @@ Children:
       DataType: String
       ModellingRule: Optional
       Value: "Accent"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -23.0
   - Name: GetTokenBtn
     Type: DropDownButton
     Children:
@@ -1713,7 +1978,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
+      Value: 146.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -1743,7 +2008,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 16.0
+      Value: 30.0
     - Name: RightMargin
       Type: BaseVariableType
       DataType: Size
@@ -1754,3 +2019,8 @@ Children:
       DataType: String
       ModellingRule: Optional
       Value: "Accent"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -23.0

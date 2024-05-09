@@ -5,6 +5,14 @@ using FTOptix.HMIProject;
 using UAManagedCore;
 using FTOptix.UI;
 using FTOptix.NetLogic;
+using FTOptix.Alarm;
+using FTOptix.RAEtherNetIP;
+using FTOptix.Retentivity;
+using FTOptix.OmronEthernetIP;
+using FTOptix.CommunicationDriver;
+using FTOptix.WebUI;
+using FTOptix.Modbus;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class ClockLogic : BaseNetLogic

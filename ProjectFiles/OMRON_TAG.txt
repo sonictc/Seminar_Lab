@@ -1,0 +1,9 @@
+HOST	NAME	DATATYPE	ADDRESS	COMMENT	TAGLINK	RW	POU
+	Data00	DINT			TRUE	RW	
+	Data01	DINT			TRUE	RW	
+	Output00	BOOL	BuiltInIO://cpu/#0/Output_Bit_00		TRUE	RW	
+	Output01	BOOL	BuiltInIO://cpu/#0/Output_Bit_01		TRUE	RW	
+	Output02	BOOL	BuiltInIO://cpu/#0/Output_Bit_02		TRUE	RW	
+	TestOut00	BOOL			TRUE	RW	
+	TestIn00	BOOL			TRUE	RW	
+	TestIn01	BOOL			TRUE	RW	

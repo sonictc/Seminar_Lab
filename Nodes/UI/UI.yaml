@@ -70,7 +70,7 @@ Children:
       - Name: Color
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#65b2ef"
+        Value: "#6e7f91"
       - Name: BorderColor
         Type: BaseDataVariableType
         DataType: Color
@@ -82,7 +82,7 @@ Children:
       - Name: FocusBorderColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#0fafff"
+        Value: "#e4e4e4"
       - Name: FontFamily
         Type: BaseDataVariableType
         DataType: Font
@@ -98,7 +98,7 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 13.0
+        Value: 18.0
       - Name: BorderWidth
         Type: BaseDataVariableType
         DataType: Size
@@ -106,7 +106,7 @@ Children:
       - Name: Radius
         Type: BaseDataVariableType
         DataType: Size
-        Value: 0.0
+        Value: 20.0
     - Name: BorderedRectangular
       Type: ButtonStyle
       Children:
@@ -202,6 +202,18 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         Value: 500
+      - Name: FocusBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#3b5067"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#3b5067"
+      - Name: PressedTextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
   - Name: InputBoxStyles
     Type: BaseObjectType
     Children:
@@ -347,6 +359,19 @@ Children:
       Type: LabelStyle
     - Name: HeaderLabel
       Type: LabelStyle
+      Children:
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 500
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: FontItalic
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -365,6 +390,10 @@ Children:
     Type: BaseDataVariableType
     DataType: Font
     Value: "Roboto"
+  - Name: FocusColor
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#00000000"
 - Name: FriendlyLight
   Id: g=7af0994a866e36c232584f6118903a94
   Type: StyleSheet
@@ -406,7 +435,7 @@ Children:
       - Name: Color
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#0fafff"
+        Value: "#6e7f91"
       - Name: BorderColor
         Type: BaseDataVariableType
         DataType: Color
@@ -418,7 +447,7 @@ Children:
       - Name: FocusBorderColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#0fafff"
+        Value: "#cfcfcf"
       - Name: FontFamily
         Type: BaseDataVariableType
         DataType: Font
@@ -434,15 +463,15 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 13.0
+        Value: 18.0
       - Name: BorderWidth
         Type: BaseDataVariableType
         DataType: Size
-        Value: 1.0
+        Value: 0.0
       - Name: Radius
         Type: BaseDataVariableType
         DataType: Size
-        Value: 0.0
+        Value: 20.0
     - Name: BorderedRectangular
       Type: ButtonStyle
       Children:
@@ -523,13 +552,13 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 0.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#5c5a5a"
     - Name: Navigation
       Type: ButtonStyle
       Children:
-      - Name: FocusBorderColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#3a4a51"
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
@@ -538,6 +567,22 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         Value: 500
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f0f0f0"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00000000"
+      - Name: PressedTextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#5c5a5a"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#5c5a5a"
   - Name: InputBoxStyles
     Type: BaseObjectType
     Children:
@@ -629,6 +674,11 @@ Children:
     Children:
     - Name: Default
       Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#5c5a5a"
     - Name: HeaderLabel
       Type: LabelStyle
       Children:
@@ -636,6 +686,22 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#5c5a5a"
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 500
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: FontItalic
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 0.0
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -657,7 +723,7 @@ Children:
   - Name: ScreenColor
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#e4e4e4"
+    Value: "#f0f0f0"
   - Name: TextColor
     Type: BaseDataVariableType
     DataType: Color
@@ -684,7 +750,6 @@ Children:
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
   - Name: StyleSheet
-    Id: g=32c993e7b1c87ea4953cbd1098e45ed7
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Seminar_Lab/UI/FriendlyLight"
@@ -707,15 +772,15 @@ Children:
   - Name: Session
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/Seminar_Lab/UI/UISession"
+    Value: "/Objects/Seminar_Lab/UI/UISession1"
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/SessionType/UISession"
-- Name: ns=7;UISession
-  Id: g=619f42862ae323b871c71ed4d7ec22d0
-  Supertype: ns=3;UISession
+- Name: UISession1
+  Id: g=be77a76f9dff169a104a8e9fc6c5a4a5
+  Supertype: UISession
   Children:
   - Name: IsInteractive
     Type: BaseDataVariableType
@@ -790,12 +855,10 @@ Children:
     DataType: Boolean
     AccessLevel: Read
     Value: false
-  - Name: LocaleId
-    Type: BaseVariableType
-    DataType: LocaleId
-    ReferenceType: HasProperty
-    ModellingRule: Optional
-    Value: "en-US"
+  - Name: CurrentPage
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
 - Name: MainWindow
   Id: g=01a7e8933afd7c95fe894b0859308138
   Supertype: Window
@@ -835,8 +898,6 @@ Children:
     - Name: Header
       Type: Header
       Children:
-      - Name: Label1
-        Type: Label
       - Name: SettingButton
         Type: Panel
         Children:
@@ -881,6 +942,52 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             Value: "ns=7;%PROJECTDIR%/Image/svg/hamburger-menu-svgrepo-com.svg"
+      - Name: AdvancedSVGImage1
+        Type: AdvancedSVGImage
+        Children:
+        - Name: SVGElementProperties
+          Type: BaseObjectType
+          Children:
+          - Name: AdvancedSVGImageProperty1
+            Type: AdvancedSVGImageElementProperty
+            Children:
+            - Name: ID
+              Type: BaseDataVariableType
+              DataType: String
+              Value: ""
+            - Name: Property
+              Type: BaseDataVariableType
+              DataType: AdvancedSVGImagePropertyClass
+              Value: 0
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: ""
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Value: false
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet@BrowseName"
     - Name: NavigationPanel
       Type: NavigationPanel
       Children:
@@ -990,6 +1097,11 @@ Children:
         DataType: NavigationPanelTabPositionEnum
         ModellingRule: Optional
         Value: 4
+      - Name: Appearance
+        Type: BaseVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: ""
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -1342,6 +1454,168 @@ Children:
                   Type: PropertyType
                   DataType: UInt16
                   Value: 0
+          - Name: StripedRightArrow1
+            Type: ScaleLayout
+            WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#d1d3d4"
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet/TextColor"
+            - Name: shape
+              Type: Image
+              Children:
+              - Name: Path
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                Value: "ns=7;%PROJECTDIR%/res/StripedRightArrow_shape.svg"
+              - Name: DynamicColor
+                Type: BaseDataVariableType
+                DataType: Color
+                Value: "#d1d3d4"
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../FillColor"
+      - Name: HighlightBar
+        Type: Rectangle
+        Children:
+        - Name: NumberAnimation1
+          Type: NumberAnimation
+          Children:
+          - Name: To
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+          - Name: Target
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/VariableTypes/BaseVariableType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../LeftMargin@NodeId"
+          - Name: Running
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../CurrentPage"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          Value: 0.0
+        - Name: NumberAnimation2
+          Type: NumberAnimation
+          Children:
+          - Name: To
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 160.0
+          - Name: Target
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/VariableTypes/BaseVariableType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../LeftMargin@NodeId"
+          - Name: Running
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../CurrentPage"
+        - Name: NumberAnimation3
+          Type: NumberAnimation
+          Children:
+          - Name: To
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 320.0
+          - Name: Target
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/VariableTypes/BaseVariableType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../LeftMargin@NodeId"
+          - Name: Running
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../CurrentPage"
+      - Name: CurrentPage
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../NavigationPanel/CurrentTabIndex"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
   - Name: FullScreen
     Type: BaseDataVariableType
     DataType: Boolean

@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [15,3],
+    "Dimensions": [16,3],
     "Body": [
      "","en-US","th-TH",
      "MQTT","MQTT","MQTT",
@@ -20,11 +20,12 @@ Children:
      "OPC UA Lab","OPC UA Lab","การทดสอบ ส่งข้อมูลด้วย OPC UA",
      "Language :","Language :","ภาษา :",
      "Get Token","Get Token","ขอรหัส Token",
-     "FTOptix Hands-On Lab","FTOptix Hands-On Lab","FTOptix Hands-On Lab",
+     "Hands-On Lab","","Hands-On Lab",
      "Free to Test Broker","Free to Test Broker","Broker ฟรีสำหรับเทส",
-     "Build your broker","Build your broker","สร้าง Broker",
+     "MQTT.org","MQTT.org","MQTT.org",
      "Theme :","Theme :","ธีม :",
      "View Sticker","View Sticker","ดูรหัสสติกเกอร์",
-     "What is MQTT?","What is MQTT?","MQTT คือ?"
+     "What is MQTT?","What is MQTT?","MQTT คือ?",
+     "EXIT","EXIT","ออก"
     ]
    }

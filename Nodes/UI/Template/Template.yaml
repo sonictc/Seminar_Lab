@@ -250,38 +250,39 @@ Children:
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
-        - Name: MethodContainer1
+        - Name: MethodContainer2
           Type: BaseObjectType
           Children:
           - Name: ns=2;ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: "/Objects/Commands/VariableCommands"
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../SetStyleSheetToPresentationEngine@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
           - Name: ns=2;Method
             Type: BaseDataVariableType
             DataType: String
-            Value: "Set"
+            Value: "SetStyleSheet"
           - Name: InputArguments
             Type: BaseObjectType
             Children:
-            - Name: VariableToModify
-              Type: BaseDataVariableType
-              DataType: VariablePointer
-              Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet@Pointer"
-            - Name: Value
+            - Name: newStyleSheet
               Type: BaseDataVariableType
               DataType: NodeId
               Value: "/Objects/Seminar_Lab/UI/FriendlyDark"
-            - Name: ArrayIndex
-              Type: BaseDataVariableType
-              DataType: UInt32
-              ValueRank: ScalarOrOneDimension
-              Value: 0
       - Name: EventArguments
         Type: MouseDownEvent
         Children:
@@ -392,6 +393,26 @@ Children:
       DataType: Boolean
       ModellingRule: Optional
       Value: true
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 0
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 95.0
+    - Name: BottomMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
     - Name: MouseDownEventHandler1
       Type: EventHandler
       Children:
@@ -408,32 +429,33 @@ Children:
           - Name: ns=2;ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: "/Objects/Commands/VariableCommands"
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
             Children:
             - Name: Kind
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../SetStyleSheetToPresentationEngine@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
           - Name: ns=2;Method
             Type: BaseDataVariableType
             DataType: String
-            Value: "Set"
+            Value: "SetStyleSheet"
           - Name: InputArguments
             Type: BaseObjectType
             Children:
-            - Name: VariableToModify
-              Type: BaseDataVariableType
-              DataType: VariablePointer
-              Value: "/Objects/Seminar_Lab/UI/NativePresentationEngine/StyleSheet@Pointer"
-            - Name: Value
+            - Name: newStyleSheet
               Type: BaseDataVariableType
               DataType: NodeId
               Value: "/Objects/Seminar_Lab/UI/FriendlyLight"
-            - Name: ArrayIndex
-              Type: BaseDataVariableType
-              DataType: UInt32
-              ValueRank: ScalarOrOneDimension
-              Value: 0
       - Name: EventArguments
         Type: MouseDownEvent
         Children:
@@ -469,26 +491,6 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 0
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 95.0
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
   - Name: Label1
     Type: Label
     Children:
@@ -941,7 +943,6 @@ Children:
       - Name: From
         Type: BaseDataVariableType
         DataType: Float
-        ModellingRule: Optional
         Value: 160.0
       - Name: Duration
         Type: BaseDataVariableType
@@ -999,7 +1000,6 @@ Children:
       - Name: From
         Type: BaseDataVariableType
         DataType: Float
-        ModellingRule: Optional
         Value: 220.0
       - Name: Duration
         Type: BaseDataVariableType
@@ -1011,6 +1011,20 @@ Children:
         DataType: EasingCurveEnum
         ModellingRule: Optional
         Value: 0
+  - Name: SetStyleSheetToPresentationEngine
+    Type: NetLogic
+    WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+    Children:
+    - Class: Method
+      Name: SetStyleSheet
+      Children:
+      - Name: ns=0;InputArguments
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"newStyleSheet","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
 - Name: LineSticker
   Id: g=8000b61ee0501cacfb2a2214a8521a4e
   Supertype: Panel
@@ -1134,58 +1148,7 @@ Children:
     - Name: URL
       Type: BaseDataVariableType
       DataType: ResourceUri
-      Value: "https://www.twilio.com/content/dam/twilio-com/global/en/blog/legacy/2023/what-is-mqtt/MQTT_Diagram_gOmDdU4.png"
-    - Class: Reference
-      Target: ns=3;i=354
-      Direction: Forward
-    - Class: Reference
-      Target: ns=3;i=356
-      Direction: Forward
-    - Class: Reference
-      Target: ns=3;i=358
-      Direction: Forward
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 300.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 300.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-- Name: BuildMQTTBroker
-  Id: g=a1d3e4a7682ec76dc82ba3beb6b38d29
-  Supertype: Panel
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 900.0
-  - Name: Height
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 506.0
-  - Name: WebBrowser1
-    Type: WebBrowser
-    Children:
-    - Name: URL
-      Type: BaseDataVariableType
-      DataType: ResourceUri
-      Value: "https://mosquitto.org/download/"
+      Value: "https://mqtt.org"
     - Class: Reference
       Target: ns=3;i=354
       Direction: Forward
@@ -1237,6 +1200,57 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       Value: "https://www.hivemq.com/mqtt/public-mqtt-broker/"
+    - Class: Reference
+      Target: ns=3;i=354
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=356
+      Direction: Forward
+    - Class: Reference
+      Target: ns=3;i=358
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+- Name: CommunicationOverview
+  Id: g=329db65e6ab6390cf22829ba684b8227
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 900.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 506.0
+  - Name: WebBrowser1
+    Type: WebBrowser
+    Children:
+    - Name: URL
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "https://www.rockwellautomation.com/en-us/docs/factorytalk-optix/1-00/contents-ditamap/using-the-software/communication-driver/communication-drivers-overview.html"
     - Class: Reference
       Target: ns=3;i=354
       Direction: Forward
