@@ -1611,7 +1611,7 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 20.0
-      - Name: Label2
+      - Name: MQTTStatus
         Type: Label
         Children:
         - Name: Text

@@ -13,6 +13,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.WebUI;
 using FTOptix.Modbus;
 using FTOptix.OPCUAServer;
+using FTOptix.Store;
 #endregion
 
 public class ClockLogic : BaseNetLogic
